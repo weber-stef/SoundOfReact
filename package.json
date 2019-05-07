@@ -30,5 +30,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "> Remember sound of silence? Let's refactor it into react ",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weber-stef/SoundOfReact.git"
+  },
+  "author": "Stefan Wruck <vitatech@gmx.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/weber-stef/SoundOfReact/issues"
+  },
+  "homepage": "https://github.com/weber-stef/SoundOfReact#readme"
 }
