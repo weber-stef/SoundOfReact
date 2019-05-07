@@ -3,13 +3,18 @@ import React from "react";
 import SearchBar from "./Components/Search-Bar";
 import TrackList from "./Components/Track-List";
 import TrackListItem from "./Components/Track-List-Item";
+import CountFiles from "./Components/CountFiles";
 
 class App extends React.Component {
   state = {
     tracks: null,
-    searchTerm: ""
+    searchTerm: "Joy Division",
   };
 
+  // Wenn component is all  loaded start function that
+  componentDidMount() {
+    this.searchForMusic();
+  }
   onSearchInputChange = e => {
     e.persist();
     const searchTerm = e.target.value;
@@ -35,11 +40,12 @@ class App extends React.Component {
           onSearchInputChangeHandler={this.onSearchInputChange}
           searchTerm={searchTerm}
         />
+        <CountFiles />
         {tracks ? (
           <TrackList tracks={tracks} />
         ) : (
-          <div>Search to find music</div>
-        )}
+            <div>Search to find music</div>
+          )}
       </div>
     );
   }
